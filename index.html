@@ -3,14 +3,11 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Chupacabras2</title>
+    <title>Chupacabras</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
     <!-- Place favicon.ico in the root directory -->
-
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/chupacabras.css">
 
     <script type="text/javascript"
             data-main="js/init.js"
@@ -21,66 +18,22 @@
        google.load("feeds", "1")
     </script>
 
-    <script type="text/javascript">
-      console.log("here4");
-      var feedlimit = 10;
-
-      function rssfeedsetup(feed_url){
-        var feedpointer = new google.feeds.Feed(feed_url)
-        feedpointer.setNumEntries(feedlimit)
-        feedpointer.load(storeFeed)
-      }
-
-      function storeFeed(result){
-        if (!result.error){
-          var thefeeds = result.feed.entries;
-          localStorage.rss_elements = JSON.stringify(thefeeds);
-          console.log("rss_elements", localStorage.rss_elements);
-
-          renderRSSElements(result.feed.entries);
-        } else {
-          alert("Error fetching feeds!")
-        }
-      }
-
-      function renderRSSElements(rss_elements){
-        console.log("renderRSSElements", rss_elements);
-        _(rss_elements).each(renderRSSElement);
-      }
-
-      function renderRSSElement(rss_element){
-        var list = $('.list').get(0);
-        list.add({ title: rss_element.title, desc: rss_element.content});
-      }
-
-      console.log("here");
-
-      function storeRss() {
-        rss_url = $("#rss_field").val();
-        console.log("RSS URL:", rss_url);
-        localStorage.rss_url = rss_url;
-        rssfeedsetup(rss_url);
-      }
-
-
-      function start(){
-        console.log("start");
-        renderRSSElements(JSON.parse(localStorage.rss_elements));
-      }
-
-    </script>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/chupacabras.css">
+    <script type="text/javascript" src="js/lib/chupacabras.js"></script>
   </head>
-  <body onload="">
+
+  <body>
     <x-view id="app">
       <x-view class="home">
         <x-view class="homesub">
           <header>
-            <h1>Add Rss URL</h1>
+            <h1>Add RSS URL</h1>
           </header>
 
           <form id="rss_form">
             <input type="text" name="rss_url" id="rss_field" />
-            <input type="button" onclick="storeRss()" value="add RSS" id="rss_button" />
+            <input type="button" onclick="storeRSS()" value="add RSS" id="rss_button" />
           </form>
 
           <footer>

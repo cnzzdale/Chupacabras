@@ -1,5 +1,3 @@
-console.log("here3");
-
 require.config({
     baseUrl: 'js/lib',
 
