@@ -16,7 +16,7 @@ html, body {
 
 ._contents {
 background:
-   url(../img/chupacabra.png) no-repeat -90px 110%,
+   url(../img/chupacabra_1.png) no-repeat 100% 103%,
    url(../img/bg_main.gif) repeat 0 0;
 }
 
@@ -61,7 +61,6 @@ x-view > header h1, h1 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   font-size: 15px;
   border-top: 1px solid #666;
-  background-color: #fff;
 }
 
 x-listview.list li::before {
@@ -129,3 +128,6 @@ input[type='button'] {
 }
 
 
+.rss_content {
+  margin-bottom: 25px;
+}
