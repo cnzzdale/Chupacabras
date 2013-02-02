@@ -28,13 +28,15 @@
       <x-view class="home">
         <x-view class="homesub">
           <header>
-            <h1>Feed-Rautha</h1>
+            <h1>chupacabras!</h1>
             <button data-view=".list">Feeds</button>
           </header>
 
+          <p style='text-align: center;'>Add an URL to get all the articles from RSS/ATOM</p>
+
           <form id="rss_form">
-            <input type="text" name="rss_url" id="rss_field" />
-            <input type="button" onclick="storeRSS()" value="Load RSS" id="rss_button" />
+            <input type="text" name="rss_url" id="rss_field" placeholder="http://"/>
+            <input type="button" onclick="storeRSS()" value="Add URL" id="rss_button" />
           </form>
 
           <footer>
@@ -43,7 +45,7 @@
 
         <x-listview class="list">
           <header>
-            <h1>RSS Elements</h1>
+            <h1>Feed Items</h1>
           </header>
         </x-listview>
 
