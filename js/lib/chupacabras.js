@@ -14,7 +14,7 @@ function storeFeed(result){
     localStorage.rss_elements = JSON.stringify(thefeeds);
     console.log("rss_elements", localStorage.rss_elements);
     renderRSSElements(result.feed.entries);
-    alert("RSS sync'ed");
+    $(".list")[0].open();
   } else {
     alert("Error fetching feeds!")
   }
