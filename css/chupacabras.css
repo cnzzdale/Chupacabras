@@ -1,0 +1,9 @@
+body {
+  background-color: red;
+}
+
+#rss_field,
+#rss_button {
+  width: 100%;
+  font-size: 20px;
+}
