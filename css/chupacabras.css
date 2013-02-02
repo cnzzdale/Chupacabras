@@ -15,7 +15,9 @@ html, body {
 }
 
 ._contents {
-  background: #fff url(../img/bg_main.gif) repeat 0 0;
+background:
+   url(../img/chupacabra.png) no-repeat -90px 110%,
+   url(../img/bg_main.gif) repeat 0 0;
 }
 
 x-view > header,
@@ -48,7 +50,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
   letter-spacing: -1px;
 }
 
-x-view > header h1 {
+x-view > header h1, h1 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   font-weight: bold;
   color: #3dff69;
@@ -59,7 +61,11 @@ x-view > header h1 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   font-size: 15px;
   border-top: 1px solid #666;
+  background-color: #fff;
+}
 
+x-listview.list li::before {
+  background: url(../img/glyphicons-halflings.png) no-repeat -95px -2px;
 }
 
 
@@ -121,3 +127,5 @@ input[type='button'] {
   width: 100%;
   font-size: 22px;
 }
+
+
