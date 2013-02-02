@@ -1,3 +1,5 @@
+console.log("loading js");
+
 var feedlimit = 20;
 
 function rssfeedsetup(feed_url){
@@ -11,8 +13,8 @@ function storeFeed(result){
     var thefeeds = result.feed.entries;
     localStorage.rss_elements = JSON.stringify(thefeeds);
     console.log("rss_elements", localStorage.rss_elements);
-
     renderRSSElements(result.feed.entries);
+    alert("RSS sync'ed");
   } else {
     alert("Error fetching feeds!")
   }
