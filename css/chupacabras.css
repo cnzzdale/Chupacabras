@@ -16,8 +16,8 @@ html, body {
 
 ._contents {
 background:
-   url(../img/chupacabra_1.png) no-repeat 100% 103%,
-   url(../img/bg_main.gif) repeat 0 0;
+   url(../img/chupacabra_1.png) no-repeat right 105%,
+   url(../img/animal.png) repeat 0 0;
 }
 
 x-view > header,
@@ -60,7 +60,7 @@ x-view > header h1, h1 {
   font-weight: bold;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   font-size: 15px;
-  border-top: 1px solid #666;
+  border-top: 1px solid #ddd !important;
 }
 
 x-listview.list li::before {
@@ -118,7 +118,7 @@ input[type='text'] {
   border: 1px solid #ddd;
   margin: 0;
   display: block;
-  width: 94%;
+  width: 97%;
 }
 
 input[type='button'] {
